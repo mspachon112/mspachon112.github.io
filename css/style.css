@@ -4,3 +4,37 @@
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
 }
+
+html {
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+}
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes pop {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.animate-pop {
+  animation: pop 2s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+.hover-glow:hover {
+  text-shadow: 0 0 8px rgba(168, 85, 247, 0.6); 
+}
