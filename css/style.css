@@ -21,20 +21,16 @@ html {
   transform: translateY(0);
 }
 
-@keyframes pop {
-  0%, 100% {
-    transform: scale(1);
+@keyframes gradient-x {
+  0% {
+    background-position: 0% 50%;
   }
-  50% {
-    transform: scale(1.08);
+  100% {
+    background-position: 200% 50%;
   }
 }
 
-.animate-pop {
-  animation: pop 2s ease-in-out infinite;
-  animation-delay: 4s;
-}
-
-.hover-glow:hover {
-  text-shadow: 0 0 8px rgba(168, 85, 247, 0.6); 
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 4s linear infinite;
 }

@@ -20,7 +20,7 @@
     <header class="w-full fixed top-0 left-0 z-50 bg-white/70 dark:bg-slate-900/80 backdrop-blur-md shadow-md border-b border-gray-200 dark:border-slate-700 transition-colors duration-500">
         <nav class="relative container mx-auto flex items-center justify-between px-8 sm:px-16 py-3">
             <div class="flex items-center space-x-3 dark:hover:text-purple-300">
-                <span class="text-2xl font-extrabold tracking-tight select-none transition-all duration-300 text-gray-800 dark:text-gray-100 hover:text-purple-600 dark:hover:text-purple-400 hover-glow animate-pop">
+                <span href="#" class="text-2xl font-extrabold tracking-tight select-none cursor-pointer transition-all duration-500 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-500">
                     @MsPachon112
                 </span>
             </div>
@@ -45,7 +45,7 @@
             </div>
 
             <div class="flex items-center space-x-2">
-                <button id="mobile-menu-btn" class="lg:hidden flex items-center px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Abrir menú">
+                <button id="mobile-menu-btn" class="lg:hidden flex items-center px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" aria-label="Abrir menú">
                     <svg class="w-7 h-7 text-gray-700 dark:text-gray-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -54,7 +54,7 @@
                     class="relative w-12 h-6 sm:w-14 sm:h-7 md:w-16 md:h-8 rounded-full border border-gray-300 
                             dark:border-gray-500 bg-gray-200 dark:bg-slate-700 
                             flex items-center transition-colors duration-300 focus:outline-none
-                            focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50"
+                            focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
                     aria-label="Cambiar tema">
                     <span id="switch-knob"
                     class="absolute left-0.5 sm:left-1 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white dark:bg-slate-900 
@@ -87,28 +87,49 @@
     </div>
 
     <main class="w-full max-w-4xl mx-auto flex-grow flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 pt-20">
-        <section class="w-full fade-section opacity-0 translate-y-8 transition-all duration-700 mt-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 items-stretch w-full gap-6">
-                <div class="flex flex-col bg-white dark:bg-slate-800 rounded-lg shadow-lg justify-center p-8 hover:scale-105 transition-transform duration-300">
-                    <div class="flex justify-center">
-                        <div class="relative w-36 h-36 flex items-center justify-center">
-                            <span class="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-400 via-purple-400 to-pink-400 opacity-40 blur-lg"></span>
-                            <img src="https://avatars.githubusercontent.com/u/109450634?v=4" alt="Michael Pachón"
-                                class="relative w-32 h-32 rounded-full mx-auto border-4 border-white dark:border-slate-700 shadow-xl transition-all duration-500 hover:border-purple-600 hover:dark:border-purple-400">
-                        </div>
-                    </div>
-                    <h1 class="text-3xl font-bold mt-4 text-center">
-                        Michael Pachón
-                    </h1>
-                    <p class="text-center text-gray-700 dark:text-gray-300">Full Stack Developer</p>
+        <section class="w-full fade-section opacity-0 translate-y-8 transition-all duration-700 py-6 sm:py-10">
+            <div class="flex flex-col md:flex-row items-center justify-between bg-white dark:bg-slate-800 rounded-2xl shadow-xl overflow-hidden p-8 sm:p-12 gap-8 hover:scale-[1.02] transition-transform duration-500">
+                <div class="relative w-40 h-40 flex-shrink-0">
+                    <span class="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-400 via-purple-500 to-purple-700 opacity-40 blur-lg"></span>
+                    <img
+                        src="/img/profile.png"
+                        alt="Michael Pachón"
+                        class="relative w-full h-full rounded-full border-4 bg-gray-200 dark:bg-slate-900 border-white dark:border-slate-700 shadow-2xl transition-all duration-500 hover:scale-105 hover:border-purple-500 dark:hover:border-purple-400 object-cover"
+                    />
                 </div>
-                <div class="flex flex-col bg-white dark:bg-slate-800 rounded-lg shadow-lg justify-center p-8 hover:scale-105 transition-transform duration-300 h-full">
-                    <h2 class="text-2xl font-bold mb-4 text-center">Acerca de mí</h2>
-                    <p class="text-base text-center text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Soy un desarrollador Full Stack con experiencia en la creación de aplicaciones web modernas
-                    y escalables. Me apasiona aprender nuevas tecnologías, mejorar mis habilidades constantemente
-                    y colaborar en proyectos que aporten valor real.
+
+                <div class="flex flex-col text-center md:text-left max-w-2xl">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-2">
+                        Hola, soy
+                        <span class="text-purple-600 dark:text-purple-400">Michael Pachón</span>
+                    </h2>
+
+                    <p class="text-lg font-bold mb-4 tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-600 animate-gradient-x">
+                        Full Stack Developer
                     </p>
+
+                    <p class="text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                        Tecnólogo en Análisis y Desarrollo de Software con 
+                        <span class="font-bold text-indigo-400">más de 1 año de experiencia en desarrollo web.</span>  
+                        Especializado en soluciones, automatización e integraciones, enfocado en conectar datos y optimizar procesos mediante tecnología.
+                    </p>
+
+                    <p class="text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                        Desarrollador apasionado por crear aplicaciones modernas, escalables y bien estructuradas.  
+                        Motivado por el aprendizaje continuo, la mejora constante y la creación de proyectos que generen un impacto real.
+                    </p>
+
+
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <a href="#projects"
+                            class="px-5 py-2 rounded-lg font-semibold bg-gradient-to-r from-purple-600 to-indigo-500 text-white shadow-md hover:shadow-purple-500/40 hover:scale-105 transition-all duration-300">
+                            Ver proyectos
+                        </a>
+                        <a href="#contact"
+                            class="px-5 py-2 rounded-lg font-semibold border border-purple-500 text-purple-600 dark:text-purple-300 hover:bg-purple-600 hover:text-white dark:hover:text-white transition-all duration-300">
+                            Contactarme
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
