@@ -34,3 +34,51 @@ html {
   background-size: 200% 200%;
   animation: gradient-x 4s linear infinite;
 }
+
+.border-effect {
+  position: relative;
+  border-radius: 1rem; /* igual al rounded-2xl */
+  z-index: 0;
+}
+
+.border-effect::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* grosor del borde */
+  border-radius: inherit;
+  background: linear-gradient(
+    115deg,
+    #7c3aed,
+    #6366f1,
+    #9333ea,
+    #6366f1,
+    #7c3aed
+  );
+  background-size: 300% 300%;
+  animation: border-shine 6s linear infinite;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  z-index: -1;
+}
+
+.border-effect:hover::before {
+  opacity: 1;
+}
+
+@keyframes border-shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
