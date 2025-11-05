@@ -35,50 +35,18 @@ html {
   animation: gradient-x 4s linear infinite;
 }
 
-.border-effect {
-  position: relative;
-  border-radius: 1rem; /* igual al rounded-2xl */
-  z-index: 0;
+.div-animate-shadow {
+  animation: pulse-shadow 3s ease-in-out infinite;
 }
 
-.border-effect::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  padding: 2px; /* grosor del borde */
-  border-radius: inherit;
-  background: linear-gradient(
-    115deg,
-    #7c3aed,
-    #6366f1,
-    #9333ea,
-    #6366f1,
-    #7c3aed
-  );
-  background-size: 300% 300%;
-  animation: border-shine 6s linear infinite;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask-composite: destination-out;
-  z-index: -1;
-}
-
-.border-effect:hover::before {
-  opacity: 1;
-}
-
-@keyframes border-shine {
+@keyframes pulse-shadow {
   0% {
-    background-position: 0% 50%;
+    box-shadow: 0 0 10px rgba(181, 120, 250, 0.8);
   }
   50% {
-    background-position: 100% 50%;
+    box-shadow: 0 0 30px rgba(126, 34, 206, 0.8);
   }
   100% {
-    background-position: 0% 50%;
+    box-shadow: 0 0 10px rgba(181, 120, 250, 0.8);
   }
 }
